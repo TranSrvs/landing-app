@@ -6,28 +6,49 @@ interface TopNavProps {
   page: PageType;
 }
 
-const CONTACT_US_NAV_CASES = [PageType.WECLOME, PageType.QUOTE];
-const INSTANT_QUOTE_NAV_CASES = [PageType.WECLOME, PageType.CONTACT_US];
+const CONTACT_US_NAV_CASES = [PageType.WELCOME, PageType.QUOTE];
+const INSTANT_QUOTE_NAV_CASES = [PageType.WELCOME, PageType.CONTACT_US];
 
 export default function TopNav({ page }: TopNavProps) {
   return (
-    <header>
-      <nav>
+    <header className="mt-8 py-6">
+      <div className="flex mx-auto px-8 h-12 items-center">
         <div>
           <Link href="/welcome">
-            <img src="/logo.svg" alt="logo" />
-            <span>Company Name</span>
+            <img
+              src="/logo.svg"
+              className="h-12 w-12 inline-block"
+              alt="logo"
+            />
+            <span className="ml-3 font-semibold">Company Name</span>
           </Link>
         </div>
-        <div>
-          {CONTACT_US_NAV_CASES.includes(page) && (
-            <Link href="/contact-us">Contact Us</Link>
-          )}
-          {INSTANT_QUOTE_NAV_CASES.includes(page) && (
-            <Link href="/quote">Instant Quote</Link>
-          )}
-        </div>
-      </nav>
+        <div className="grow" />
+        <nav className="">
+          <ol className="flex items-center">
+            {CONTACT_US_NAV_CASES.includes(page) && (
+              <li className="flex items-center ml-3">
+                <Link
+                  href="/contact-us"
+                  className={`
+                  px-3 p-3
+                  rounded-md border-slate-400 border
+                `}
+                >
+                  Contact Us
+                </Link>
+              </li>
+            )}
+            {INSTANT_QUOTE_NAV_CASES.includes(page) && (
+              <li className="flex items-center ml-3">
+                <Link href="/quote" className="px-3 p-3">
+                  Instant Quote
+                </Link>
+              </li>
+            )}
+          </ol>
+        </nav>
+      </div>
     </header>
   );
 }

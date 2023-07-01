@@ -1,3 +1,5 @@
+import View from "@/presentation/welcome/view";
+
 export default function WelcomePage() {
-  return <div>Welcome</div>;
+  return <View />;
 }

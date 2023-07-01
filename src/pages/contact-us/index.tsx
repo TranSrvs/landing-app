@@ -1,3 +1,5 @@
+import View from "@/presentation/contactUs/view";
+
 export default function ContactUsPage() {
-  return <div>Contact us</div>;
+  return <View />;
 }

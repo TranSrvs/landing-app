@@ -1,3 +1,5 @@
+import View from "@/presentation/quote/view";
+
 export default function QuotePage() {
-  return <div>Quote</div>;
+  return <View />;
 }

@@ -10,7 +10,6 @@ interface FooterProps {
 }
 
 export default function Footer({
-  langs,
   onLangChanged,
   currencies,
   onCurrencyChanged

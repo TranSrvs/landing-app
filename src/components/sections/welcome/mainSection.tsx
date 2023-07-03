@@ -31,7 +31,7 @@ export default function MainSection() {
         <div className="p-4">
           <picture>
             <img
-              className="max-w-md mx-auto"
+              className="md:max-w-md mx-auto"
               src={`${publicRuntimeConfig.basePath}/welcome_hero.webp`}
               alt="hero img"
               loading="eager"

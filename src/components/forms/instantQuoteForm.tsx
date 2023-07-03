@@ -26,7 +26,7 @@ export default function InstantQuoteForm({
     </option>
   ));
   let guaranteedDateItems = (guaranteedDates || []).map((item: Date, index) => (
-    <option key={index} value={item}>
+    <option key={index} value={item.toString()}>
       {item}
     </option>
   ));

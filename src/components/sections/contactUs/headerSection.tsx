@@ -18,7 +18,7 @@ export default function HeaderSection({ contactDateTime }: HeaderSectionProps) {
         </h5>
         <div className="flex items-center mb-3 justify-center grow">
           <picture className="mr-3 inline-block">
-            <img src="/send.svg" alt="telephone" />
+            <img src={`${process.env.BASE_PATH}/send.svg`} alt="telephone" />
           </picture>
           <Link className="text-blue-600" href="mailto:amoallim15@gmail.com">
             amoallim15@gmail.com

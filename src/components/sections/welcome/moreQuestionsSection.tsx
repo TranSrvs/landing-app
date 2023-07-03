@@ -30,7 +30,7 @@ export default function MoreQuestionsSection() {
               <div
                 className="h-24 w-24 rounded-full bg-cover"
                 style={{
-                  backgroundImage: "url(/eugene.png)"
+                  backgroundImage: `url(${process.env.BASE_PATH}/eugene.png)`
                 }}
               ></div>
             </Link>

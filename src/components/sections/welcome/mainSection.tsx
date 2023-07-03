@@ -30,7 +30,7 @@ export default function MainSection() {
           <picture>
             <img
               className="max-w-md"
-              src="/welcome_hero.webp"
+              src={`${process.env.BASE_PATH}/welcome_hero.webp`}
               alt="hero img"
               loading="eager"
             />

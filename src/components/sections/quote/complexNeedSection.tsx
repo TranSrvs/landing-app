@@ -11,7 +11,7 @@ export default function ComplexNeedSection() {
               <div
                 className="h-24 w-24 rounded-full bg-cover"
                 style={{
-                  backgroundImage: "url(/eugene.png)"
+                  backgroundImage: `url(${process.env.BASE_PATH}/eugene.png)`
                 }}
               ></div>
             </div>
@@ -34,7 +34,7 @@ export default function ComplexNeedSection() {
         <div className=" basis-1/3">
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img src="/telephone.svg" alt="telephone" />
+              <img src={`${process.env.BASE_PATH}/telephone.svg`} alt="telephone" />
             </picture>
             <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
               (+82) 10-9160-1590
@@ -43,7 +43,7 @@ export default function ComplexNeedSection() {
         </div>
         <div className="flex items-center mb-3 basis-1/3">
           <picture className="mr-3 inline-block">
-            <img src="/send.svg" alt="telephone" />
+            <img src={`${process.env.BASE_PATH}/send.svg`} alt="telephone" />
           </picture>
           <Link className="text-blue-600" href="/contact-us">
             Contact us

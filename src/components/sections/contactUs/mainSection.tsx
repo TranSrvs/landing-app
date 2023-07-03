@@ -48,7 +48,7 @@ export default function MainSection({ status }: MainSectionProps) {
                 </p>
                 <div className="flex items-center mb-3">
                   <picture className="mr-3 inline-block">
-                    <img src="/telephone.svg" alt="telephone" />
+                    <img src={`${process.env.BASE_PATH}/telephone.svg`} alt="telephone" />
                   </picture>
                   <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
                     (+82) 10-9160-1590

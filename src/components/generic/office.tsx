@@ -18,7 +18,7 @@ export default function Office({
     <div className="flex">
       <div className="">
         <picture className="p-3 rounded-full bg-slate-200 block mr-5 border border-slate-500">
-          <img src="/map_pin.svg" alt="map pin" className="w-6 h-6" />
+          <img src={`${process.env.BASE_PATH}/map_pin.svg`} alt="map pin" className="w-6 h-6" />
         </picture>
       </div>
       <div>

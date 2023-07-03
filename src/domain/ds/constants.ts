@@ -83,4 +83,3 @@ export const Subjects = [
     labelKo: "Travel & Tourism"
   }
 ];
-

@@ -37,7 +37,7 @@ export default function MoreQuestionsSection() {
           </div>
           <div className="text-center">
             <h4 className="text-xl font-semibold mb-3">
-              <span>Hello, I'm Eugene.</span>
+              <span>Hello, I&apos;m Eugene.</span>
               <br />
               <span>How can I help you?</span>
             </h4>

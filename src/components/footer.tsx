@@ -1,7 +1,28 @@
 import React from "react";
 import Link from "next/link";
+import LangType from "@/domain/models/enums/langType";
+import CurrencyType from "@/domain/models/enums/currencyType";
 
-export default function Footer() {
+interface FooterProps {
+  langs: LangType[];
+  onLangChanged(lang: LangType): void;
+  currencies: CurrencyType[];
+  onCurrencyChanged(currency: CurrencyType): void;
+}
+
+export default function Footer({
+  langs,
+  onLangChanged,
+  currencies,
+  onCurrencyChanged
+}: FooterProps) {
+  let langItems = (langs || []).map((item: LangType) => (
+    <option value={item.value}>{item.name}</option>
+  ));
+  let currencyItems = (currencies || []).map((item: CurrencyType) => (
+    <option value={item.value}>{item.name}</option>
+  ));
+
   return (
     <footer className="pb-16">
       <div className="mx-auto max-w-5xl px-8 flex">
@@ -33,12 +54,12 @@ export default function Footer() {
         <div className="basis-1/3">
           <div className="relative mb-3 ">
             <select className="py-3 pl-3 pr-6 w-full border rounded">
-              <option>Sample</option>
+              {langItems}
             </select>
           </div>
           <div className="relative mb-6">
             <select className="py-3 pl-3 pr-6 w-full border rounded">
-              <option>Sample</option>
+              {currencyItems}
             </select>
           </div>
           <div className="flex items-center mb-3">
@@ -58,12 +79,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex gap-4">
-            <Link href="#">
+            <Link href="">
               <picture>
                 <img src="/twitter.svg" alt="social twitter" />
               </picture>
             </Link>
-            <Link href="#">
+            <Link href="">
               <picture>
                 <img src="/linkedin.svg" alt="social linkedin" />
               </picture>

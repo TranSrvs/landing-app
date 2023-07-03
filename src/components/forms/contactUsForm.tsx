@@ -52,7 +52,7 @@ export default function ContactUsForm() {
               className="py-3 px-3 w-full border rounded"
               autoComplete="off"
               placeholder="Write a message..."
-              rows="4"
+              rows={4}
               required
             ></textarea>
           </div>

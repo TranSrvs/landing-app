@@ -12,7 +12,7 @@ const INSTANT_QUOTE_NAV_CASES = [PageType.WELCOME, PageType.CONTACT_US];
 export default function TopNav({ page }: TopNavProps) {
   return (
     <header className="mt-8 py-6">
-      <div className="flex mx-auto px-8 h-12 items-center">
+      <div className="flex mx-auto max-w-5xl px-8 h-12 items-center">
         <div>
           <Link href="/welcome">
             <img
@@ -31,8 +31,9 @@ export default function TopNav({ page }: TopNavProps) {
                 <Link
                   href="/contact-us"
                   className={`
-                  px-3 p-3
-                  rounded-md border-slate-400 border
+                  p-3
+                  rounded-md bg-slate-500
+                  text-white
                 `}
                 >
                   Contact Us
@@ -41,7 +42,14 @@ export default function TopNav({ page }: TopNavProps) {
             )}
             {INSTANT_QUOTE_NAV_CASES.includes(page) && (
               <li className="flex items-center ml-3">
-                <Link href="/quote" className="px-3 p-3">
+                <Link
+                  href="/quote"
+                  className={`
+                  p-3
+                  rounded-md bg-slate-600
+                  text-white
+                `}
+                >
                   Instant Quote
                 </Link>
               </li>

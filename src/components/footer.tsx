@@ -3,20 +3,22 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
-        <div>
-          <i>
-            <img src="/logo.svg" alt="logo" />
-          </i>
-          <div>
-            <p>
+    <footer className="pb-16">
+      <div className="mx-auto max-w-5xl px-8 flex">
+        <div className="flex">
+          <picture className="mr-6">
+            <img src="/logo.svg" alt="logo" className="w-10 h-10" />
+          </picture>
+          <div className="py-4 pr-4">
+            <p className="text-base mb-5">
               <span>
                 We are on a mission to open up language to everyone, crafted by
                 expert humans, powered by technology, and efficiently delivered.
               </span>
             </p>
-            <small>© Company Name · VAT 323323</small>
+            <small className="text-small text-slate-500">
+              © Company Name · VAT 323323
+            </small>
           </div>
         </div>
         {/*	
@@ -28,32 +30,45 @@ export default function Footer() {
 					</ul>
 				</div>
         */}
-        <div>
-          <div>
-            <select />
+        <div className="basis-1/3">
+          <div className="relative mb-3 ">
+            <select className="py-3 pl-3 pr-6 w-full border rounded">
+              <option>Sample</option>
+            </select>
           </div>
-          <div>
-            <select />
+          <div className="relative mb-6">
+            <select className="py-3 pl-3 pr-6 w-full border rounded">
+              <option>Sample</option>
+            </select>
           </div>
-          <p>
-            <i></i>
-            <Link href="tel:(+82) 10-9160-1590">(+82) 10-9160-1590</Link>
-          </p>
-          <p>
-            <i></i>
-            <Link href="mailto:amoallim15@gmail.com">amoallim15@gmail.com</Link>
-          </p>
-          <p>
+          <div className="flex items-center mb-3">
+            <picture className="mr-3 inline-block">
+              <img src="/telephone.svg" alt="telephone" />
+            </picture>
+            <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
+              (+82) 10-9160-1590
+            </Link>
+          </div>
+          <div className="flex items-center mb-3">
+            <picture className="mr-3 inline-block">
+              <img src="/send.svg" alt="telephone" />
+            </picture>
+            <Link className="text-blue-600" href="mailto:amoallim15@gmail.com">
+              amoallim15@gmail.com
+            </Link>
+          </div>
+          <div className="flex gap-4">
             <Link href="#">
-              <i></i>
+              <picture>
+                <img src="/twitter.svg" alt="social twitter" />
+              </picture>
             </Link>
             <Link href="#">
-              <i></i>
+              <picture>
+                <img src="/linkedin.svg" alt="social linkedin" />
+              </picture>
             </Link>
-            <Link href="#">
-              <i></i>
-            </Link>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

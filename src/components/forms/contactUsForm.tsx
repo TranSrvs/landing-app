@@ -47,7 +47,6 @@ export default function ContactUsForm() {
               <span className="text-red-500">*</span>
             </label>
             <textarea
-              type="textarea"
               name="message"
               className="py-3 px-3 w-full border rounded"
               autoComplete="off"

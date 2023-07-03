@@ -5,7 +5,7 @@ export default function IndexPage() {
   const router = useRouter();
   React.useEffect(() => {
     router.push("/welcome");
-  }, []);
+  }, [router]);
 
   return <div />;
 }

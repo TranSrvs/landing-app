@@ -1,7 +1,5 @@
 import React from "react";
 import InstantQuoteForm from "@/components/forms/instantQuoteForm";
-import LangType from "@/domain/models/enums/langType";
-import SubjectType from "@/domain/models/enums/subjectType";
 
 interface MainSectionProps {
   guaranteedDates: Date[];

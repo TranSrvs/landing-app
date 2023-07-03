@@ -13,11 +13,11 @@ interface MainSectionProps {
 export default function MainSection({ status }: MainSectionProps) {
   return (
     <section className="py-12">
-      <div className="mx-auto max-w-5xl px-8 flex">
-        <div className="pr-4 basis-1/2">
+      <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row gap-8">
+        <div className="basis-1/2">
           <ContactUsForm />
         </div>
-        <div className="pl-4 basis-1/2">
+        <div className="basis-1/2">
           <h3 className="text-3xl font-semibold mb-3">Our offices</h3>
           <br />
           <br />

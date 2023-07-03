@@ -6,7 +6,7 @@ const { publicRuntimeConfig } = getConfig();
 export default function MainSection() {
   return (
     <section className="py-12">
-      <div className="mx-auto max-w-5xl px-8 flex">
+      <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">
         <div className="p-4">
           <h1 className="text-5xl font-semibold mb-3">
             We open up language to everyone
@@ -31,7 +31,7 @@ export default function MainSection() {
         <div className="p-4">
           <picture>
             <img
-              className="max-w-md"
+              className="max-w-md mx-auto"
               src={`${publicRuntimeConfig.basePath}/welcome_hero.webp`}
               alt="hero img"
               loading="eager"

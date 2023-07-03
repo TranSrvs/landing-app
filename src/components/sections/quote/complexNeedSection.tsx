@@ -8,7 +8,7 @@ export default function ComplexNeedSection() {
   console.log(publicRuntimeConfig.basePath);
   return (
     <section className="py-12">
-      <div className="mx-auto max-w-5xl px-8 flex items-center gap-4">
+      <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row items-center gap-4">
         <div className="grow">
           <div className="flex">
             <div className="mr-5">
@@ -35,20 +35,18 @@ export default function ComplexNeedSection() {
             </div>
           </div>
         </div>
-        <div className=" basis-1/3">
-          <div className="flex items-center mb-3">
-            <picture className="mr-3 inline-block">
-              <img
-                src={`${publicRuntimeConfig.basePath}/telephone.svg`}
-                alt="telephone"
-              />
-            </picture>
-            <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
-              (+82) 10-9160-1590
-            </Link>
-          </div>
+        <div className="flex items-center mb-3 md:basis-1/3 self-start md:self-center">
+          <picture className="mr-3 inline-block">
+            <img
+              src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+              alt="telephone"
+            />
+          </picture>
+          <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
+            (+82) 10-9160-1590
+          </Link>
         </div>
-        <div className="flex items-center mb-3 basis-1/3">
+        <div className="flex items-center mb-3 md:basis-1/3 self-start md:self-center">
           <picture className="mr-3 inline-block">
             <img
               src={`${publicRuntimeConfig.basePath}/send.svg`}

@@ -5,7 +5,7 @@ export default function GetInstantQuoteSection() {
   return (
     <section className="py-12">
       <div className="flex px-8 mx-auto max-w-5xl">
-        <div className="bg-slate-200 grow flex px-20 py-10 items-center">
+        <div className="bg-slate-200 grow flex flex-col md:flex-row px-20 py-10 items-center text-center md:text-left">
           <div className="grow">
             <h3 className="text-3xl font-semibold mb-3">
               Get an instant quote

@@ -35,7 +35,7 @@ export default function InstantQuoteForm({
     <div className="p-12 bg-slate-700">
       <div>
         <form>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col basis-1/3">
               <label className="text-base text-white mb-3">From</label>
               <select className="py-3 px-3 w-full border rounded">
@@ -60,7 +60,7 @@ export default function InstantQuoteForm({
               />
             </div>
           </div>
-          <div className="flex gap-4 mt-5">
+          <div className="flex flex-col md:flex-row gap-4 mt-5">
             <div className="flex flex-col basis-1/3">
               <label className="text-base text-white mb-3">Subject</label>
               <select className="py-3 px-3 w-full border rounded">

@@ -3,6 +3,8 @@ import Link from "next/link";
 import LanguageTpo from "@/domain/models/tpos/language";
 import CurrencyTpo from "@/domain/models/tpos/currency";
 import { Languages, Currencies } from "@/domain/ds/constants";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 interface FooterProps {
   onLangChanged(lang: LanguageTpo): void;
@@ -29,7 +31,11 @@ export default function Footer({
       <div className="mx-auto max-w-5xl px-8 flex">
         <div className="flex">
           <picture className="mr-6">
-            <img src="/logo.svg" alt="logo" className="w-10 h-10" />
+            <img
+              src={`${publicRuntimeConfig.basePath}/logo.svg`}
+              alt="logo"
+              className="w-10 h-10"
+            />
           </picture>
           <div className="py-4 pr-4">
             <p className="text-base mb-5">
@@ -65,7 +71,10 @@ export default function Footer({
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img src="/telephone.svg" alt="telephone" />
+              <img
+                src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+                alt="telephone"
+              />
             </picture>
             <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
               (+82) 10-9160-1590
@@ -73,7 +82,10 @@ export default function Footer({
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img src="/send.svg" alt="telephone" />
+              <img
+                src={`${publicRuntimeConfig.basePath}/send.svg`}
+                alt="telephone"
+              />
             </picture>
             <Link className="text-blue-600" href="mailto:amoallim15@gmail.com">
               amoallim15@gmail.com
@@ -82,12 +94,18 @@ export default function Footer({
           <div className="flex gap-4">
             <Link href="">
               <picture>
-                <img src="/twitter.svg" alt="social twitter" />
+                <img
+                  src={`${publicRuntimeConfig.basePath}/twitter.svg`}
+                  alt="social twitter"
+                />
               </picture>
             </Link>
             <Link href="">
               <picture>
-                <img src="/linkedin.svg" alt="social linkedin" />
+                <img
+                  src={`${publicRuntimeConfig.basePath}/linkedin.svg`}
+                  alt="social linkedin"
+                />
               </picture>
             </Link>
           </div>

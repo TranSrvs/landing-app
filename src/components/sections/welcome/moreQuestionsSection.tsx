@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 export default function MoreQuestionsSection() {
   return (
@@ -30,7 +32,7 @@ export default function MoreQuestionsSection() {
               <div
                 className="h-24 w-24 rounded-full bg-cover"
                 style={{
-                  backgroundImage: `url(${process.env.BASE_PATH}/eugene.png)`
+                  backgroundImage: `url(${publicRuntimeConfig.basePath}/eugene.png)`
                 }}
               ></div>
             </Link>

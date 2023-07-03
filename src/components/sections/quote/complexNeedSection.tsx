@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
+
 export default function ComplexNeedSection() {
+  console.log(publicRuntimeConfig.basePath);
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex items-center gap-4">
@@ -11,7 +15,7 @@ export default function ComplexNeedSection() {
               <div
                 className="h-24 w-24 rounded-full bg-cover"
                 style={{
-                  backgroundImage: `url(${process.env.BASE_PATH}/eugene.png)`
+                  backgroundImage: `url(${publicRuntimeConfig.basePath}/eugene.png)`
                 }}
               ></div>
             </div>
@@ -34,7 +38,10 @@ export default function ComplexNeedSection() {
         <div className=" basis-1/3">
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img src={`${process.env.BASE_PATH}/telephone.svg`} alt="telephone" />
+              <img
+                src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+                alt="telephone"
+              />
             </picture>
             <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
               (+82) 10-9160-1590
@@ -43,7 +50,10 @@ export default function ComplexNeedSection() {
         </div>
         <div className="flex items-center mb-3 basis-1/3">
           <picture className="mr-3 inline-block">
-            <img src={`${process.env.BASE_PATH}/send.svg`} alt="telephone" />
+            <img
+              src={`${publicRuntimeConfig.basePath}/send.svg`}
+              alt="telephone"
+            />
           </picture>
           <Link className="text-blue-600" href="/contact-us">
             Contact us

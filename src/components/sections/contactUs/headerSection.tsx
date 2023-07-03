@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 interface HeaderSectionProps {
   contactDateTime: string;
@@ -18,7 +20,10 @@ export default function HeaderSection({ contactDateTime }: HeaderSectionProps) {
         </h5>
         <div className="flex items-center mb-3 justify-center grow">
           <picture className="mr-3 inline-block">
-            <img src={`${process.env.BASE_PATH}/send.svg`} alt="telephone" />
+            <img
+              src={`${publicRuntimeConfig.basePath}/send.svg`}
+              alt="telephone"
+            />
           </picture>
           <Link className="text-blue-600" href="mailto:amoallim15@gmail.com">
             amoallim15@gmail.com

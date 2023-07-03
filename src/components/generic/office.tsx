@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 interface OfficeProps {
   country: string;
   officeType: string;
@@ -18,7 +19,11 @@ export default function Office({
     <div className="flex">
       <div className="">
         <picture className="p-3 rounded-full bg-slate-200 block mr-5 border border-slate-500">
-          <img src={`${process.env.BASE_PATH}/map_pin.svg`} alt="map pin" className="w-6 h-6" />
+          <img
+            src={`${publicRuntimeConfig.basePath}/map_pin.svg`}
+            alt="map pin"
+            className="w-6 h-6"
+          />
         </picture>
       </div>
       <div>

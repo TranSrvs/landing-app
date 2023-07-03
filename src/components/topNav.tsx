@@ -2,6 +2,9 @@ import React from "react";
 import PageType from "@/domain/models/enums/pageType";
 import Link from "next/link";
 
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
+
 interface TopNavProps {
   page: PageType;
 }
@@ -16,7 +19,7 @@ export default function TopNav({ page }: TopNavProps) {
         <div>
           <Link href="/welcome">
             <img
-              src="/logo.svg"
+              src={`${publicRuntimeConfig.basePath}/logo.svg`}
               className="h-12 w-12 inline-block"
               alt="logo"
             />

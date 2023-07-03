@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 export default function MainSection() {
   return (
@@ -30,7 +32,7 @@ export default function MainSection() {
           <picture>
             <img
               className="max-w-md"
-              src={`${process.env.BASE_PATH}/welcome_hero.webp`}
+              src={`${publicRuntimeConfig.basePath}/welcome_hero.webp`}
               alt="hero img"
               loading="eager"
             />

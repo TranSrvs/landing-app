@@ -1,12 +1,18 @@
 import React from "react";
 import InstantQuoteForm from "@/components/forms/instantQuoteForm";
+import LangType from "@/domain/models/enums/langType";
+import SubjectType from "@/domain/models/enums/subjectType";
 
-export default function MainSection() {
+interface MainSectionProps {
+  guaranteedDates: Date[];
+}
+
+export default function MainSection({ guaranteedDates }: MainSectionProps) {
   return (
-    <section>
-      <div>
+    <section className="py-12">
+      <div className="mx-auto max-w-5xl px-8 flex flex-col">
         <div>
-          <InstantQuoteForm />
+          <InstantQuoteForm guaranteedDates={guaranteedDates} />
         </div>
       </div>
     </section>

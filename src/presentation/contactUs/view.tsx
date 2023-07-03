@@ -12,7 +12,7 @@ export default function View() {
     <>
       <TopNav page={PageType.CONTACT_US} />
       <main>
-        <HeaderSection contactDateTime="Now" />
+        <HeaderSection contactDateTime="today at 9:30 PM KST" />
         <MainSection />
         <GetInstantQuoteSection />
       </main>

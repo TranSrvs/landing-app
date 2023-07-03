@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import LangType from "@/domain/models/enums/langType";
-import CurrencyType from "@/domain/models/enums/currencyType";
+import LanguageTpo from "@/domain/models/tpos/language";
+import CurrencyTpo from "@/domain/models/tpos/currency";
+import { Languages, Currencies } from "@/domain/ds/constants";
 
 interface FooterProps {
-  langs: LangType[];
-  onLangChanged(lang: LangType): void;
-  currencies: CurrencyType[];
-  onCurrencyChanged(currency: CurrencyType): void;
+  onLangChanged(lang: LanguageTpo): void;
+  onCurrencyChanged(currency: CurrencyTpo): void;
 }
 
 export default function Footer({
@@ -16,11 +15,15 @@ export default function Footer({
   currencies,
   onCurrencyChanged
 }: FooterProps) {
-  let langItems = (langs || []).map((item: LangType) => (
-    <option value={item.value}>{item.name}</option>
+  let langItems = Languages.map((item: LanguageTpo) => (
+    <option key={item.id} value={item.code}>
+      {item.labelEn}
+    </option>
   ));
-  let currencyItems = (currencies || []).map((item: CurrencyType) => (
-    <option value={item.value}>{item.name}</option>
+  let currencyItems = Currencies.map((item: CurrencyTpo) => (
+    <option key={item.id} value={item.code}>
+      {item.labelEn}
+    </option>
   ));
 
   return (

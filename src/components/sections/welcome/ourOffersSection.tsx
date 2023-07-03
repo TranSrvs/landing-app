@@ -21,14 +21,14 @@ export default function OurOffersSection() {
               We currently Support Arabic, English, Korean, and Russian.
             </span>
           </p>
-          <h4 className="text-xl font-semibold mb-3">Official translations</h4>
+          <h4 className="text-xl font-semibold mb-3">Official Translation</h4>
           <p className="text-base mb-5">
             Our professional translation services can be certified or sworn in
             Court, depending on the country where you must present your
             document.
           </p>
 
-          <h4 className="text-xl font-semibold mb-3">Urgent Translations</h4>
+          <h4 className="text-xl font-semibold mb-3">Urgent Translation</h4>
           <p className="text-base mb-5">
             <span>
               We can translate large volumes in less than 24 hours thanks to our

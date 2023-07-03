@@ -12,10 +12,10 @@ export default function View() {
       <TopNav page={PageType.QUOTE} />
       <main>
         <HeaderSection />
-        <MainSection />
+        <MainSection guaranteedDates={[]} />
         <ComplexNeedSection />
       </main>
-      <Footer />
+      <Footer onLangChanged={() => {}} onCurrencyChanged={() => {}} />
     </>
   );
 }

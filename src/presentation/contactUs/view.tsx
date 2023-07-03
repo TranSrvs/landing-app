@@ -13,10 +13,10 @@ export default function View() {
       <TopNav page={PageType.CONTACT_US} />
       <main>
         <HeaderSection contactDateTime="today at 9:30 PM KST" />
-        <MainSection />
+        <MainSection status={false} />
         <GetInstantQuoteSection />
       </main>
-      <Footer />
+      <Footer onLangChanged={() => {}} onCurrencyChanged={() => {}} />
     </>
   );
 }

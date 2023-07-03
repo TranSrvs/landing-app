@@ -4,7 +4,7 @@ import SubjectTpo from "@/domain/models/tpos/subject";
 import { Languages, Subjects } from "@/domain/ds/constants";
 
 interface InstantQuoteFormProps {
-  guaranteedDates: Date;
+  guaranteedDates: Date[];
 }
 
 export default function InstantQuoteForm({

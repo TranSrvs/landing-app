@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: "/landing-app",
   publicRuntimeConfig: { basePath: "/landing-app" },
-  darkMode: false
+  darkMode: false,
+  daisyui: {
+    themes: ["light"]
+  }
 };
 
 module.exports = nextConfig;

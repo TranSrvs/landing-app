@@ -11,7 +11,6 @@ interface FooterProps {
 
 export default function Footer({
   onLangChanged,
-  currencies,
   onCurrencyChanged
 }: FooterProps) {
   let langItems = Languages.map((item: LanguageTpo) => (

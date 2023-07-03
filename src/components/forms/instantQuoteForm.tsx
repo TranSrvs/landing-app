@@ -55,8 +55,7 @@ export default function InstantQuoteForm({
                 name="work_count"
                 autoComplete="off"
                 placeholder="1000"
-                min="1"
-                rows="1"
+                min="1"  
                 className="py-3 px-3 w-full border rounded"
               />
             </div>

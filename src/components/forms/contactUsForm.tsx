@@ -33,7 +33,6 @@ export default function ContactUsForm() {
               className="py-3 px-3 w-full border rounded"
               autoComplete="off"
               placeholder="E.g. John Doe"
-              rows="1"
               required
             />
           </div>

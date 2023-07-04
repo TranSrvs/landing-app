@@ -1,8 +1,8 @@
 import React from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function OurOffersSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">

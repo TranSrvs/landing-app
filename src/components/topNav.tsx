@@ -2,7 +2,7 @@ import React from "react";
 import PageType from "@/domain/models/enums/pageType";
 import Link from "next/link";
 import { basePath } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 interface TopNavProps {
   page: PageType;

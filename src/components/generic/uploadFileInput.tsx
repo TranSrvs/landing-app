@@ -1,9 +1,9 @@
 import React from "react";
 import { basePath } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function UploadFileInput() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <div className="py-1 pl-3 pr-1 w-full border rounded bg-white flex items-center">
       <input type="hidden" name="files" />

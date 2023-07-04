@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: basePath,
   publicRuntimeConfig: { basePath: basePath },
-  i18n: i18n
+  i18n
 };
 
 module.exports = nextConfig;

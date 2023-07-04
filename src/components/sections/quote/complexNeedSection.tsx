@@ -6,10 +6,10 @@ import {
   contactPersonName,
   contactPersonPosition
 } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function ComplexNeedSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row items-center gap-4">

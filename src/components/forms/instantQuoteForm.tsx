@@ -2,7 +2,7 @@ import React from "react";
 import LanguageTpo from "@/domain/models/tpos/language";
 import SubjectTpo from "@/domain/models/tpos/subject";
 import { Languages, Subjects } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 interface InstantQuoteFormProps {
   guaranteedDates: Date[];
@@ -11,7 +11,7 @@ interface InstantQuoteFormProps {
 export default function InstantQuoteForm({
   guaranteedDates
 }: InstantQuoteFormProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   let fromLangItems = Languages.map((item: LanguageTpo) => (
     <option key={item.id} value={item.code}>

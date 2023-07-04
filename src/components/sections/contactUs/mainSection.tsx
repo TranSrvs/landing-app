@@ -3,7 +3,7 @@ import ContactUsForm from "@/components/forms/contactUsForm";
 import Office from "@/components/generic/office";
 import Link from "next/link";
 import { contactPhoneNo } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 import { basePath } from "@/domain/ds/constants";
 
 interface MainSectionProps {
@@ -11,7 +11,7 @@ interface MainSectionProps {
 }
 
 export default function MainSection({ status }: MainSectionProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row gap-8">

@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { basePath } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 import {
   contactPersonName,
   contactPersonPosition
 } from "@/domain/ds/constants";
 
 export default function MoreQuestionsSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl flex px-8 flex-col md:flex-row">

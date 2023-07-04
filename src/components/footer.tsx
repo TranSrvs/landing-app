@@ -8,7 +8,7 @@ import {
 import useLocale from "@/hooks/useLocale";
 import { basePath } from "@/domain/ds/constants";
 import useCurrency from "@/hooks/useCurrency";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { onNavigateToLocale, locale, locales } = useLocale();

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { basePath } from "@/domain/ds/constants";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 import { contactEmail } from "@/domain/ds/constants";
 
 interface HeaderSectionProps {
@@ -9,7 +9,7 @@ interface HeaderSectionProps {
 }
 
 export default function HeaderSection({ contactDateTime }: HeaderSectionProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   return (
     <section className="py-12">

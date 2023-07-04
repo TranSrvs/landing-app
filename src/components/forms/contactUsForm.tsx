@@ -1,9 +1,9 @@
 import React from "react";
 import UploadFileInput from "@/components/generic/uploadFileInput";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function ContactUsForm() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <div className="p-12 bg-slate-700">
       <div>

@@ -52,5 +52,8 @@
    "upload_files": "Upload files",
    "message": "Message",
    "send": "Send",
-   "write_a_message": "Write a message..."
+   "write_a_message": "Write a message...",
+   "view_map": "View map",
+   "select_files": "Select files",
+   "no_file_selected": "No file selected"
 }

@@ -5,7 +5,6 @@ import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
 export default function ComplexNeedSection() {
-  console.log(publicRuntimeConfig.basePath);
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row items-center gap-4">

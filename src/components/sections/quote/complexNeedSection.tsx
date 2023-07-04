@@ -37,7 +37,7 @@ export default function ComplexNeedSection() {
         <div className="flex items-center mb-3 md:basis-1/3 self-start md:self-center">
           <picture className="mr-3 inline-block">
             <img
-              src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+              src={`${publicRuntimeConfig.basePath}/imgs/telephone.svg`}
               alt="telephone"
             />
           </picture>
@@ -48,7 +48,7 @@ export default function ComplexNeedSection() {
         <div className="flex items-center mb-3 md:basis-1/3 self-start md:self-center">
           <picture className="mr-3 inline-block">
             <img
-              src={`${publicRuntimeConfig.basePath}/send.svg`}
+              src={`${publicRuntimeConfig.basePath}/imgs/send.svg`}
               alt="telephone"
             />
           </picture>

@@ -1,7 +1,7 @@
 enum PageType {
-  WELCOME,
-  CONTACT_US,
-  QUOTE
+  WELCOME = "/welcome",
+  CONTACT_US = "/contact-us",
+  QUOTE = "/quote"
 }
 
 export default PageType;

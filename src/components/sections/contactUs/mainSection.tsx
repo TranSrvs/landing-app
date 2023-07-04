@@ -52,7 +52,7 @@ export default function MainSection({ status }: MainSectionProps) {
                 <div className="flex items-center mb-3">
                   <picture className="mr-3 inline-block">
                     <img
-                      src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+                      src={`${publicRuntimeConfig.basePath}/imgs/telephone.svg`}
                       alt="telephone"
                     />
                   </picture>

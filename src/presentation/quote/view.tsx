@@ -15,7 +15,7 @@ export default function View() {
         <MainSection guaranteedDates={[]} />
         <ComplexNeedSection />
       </main>
-      <Footer onLangChanged={() => {}} onCurrencyChanged={() => {}} />
+      <Footer />
     </>
   );
 }

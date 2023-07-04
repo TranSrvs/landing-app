@@ -1,52 +1,34 @@
 import React from "react";
 import Link from "next/link";
-import LanguageTpo from "@/domain/models/tpos/language";
-import CurrencyTpo from "@/domain/models/tpos/currency";
-import { Languages, Currencies } from "@/domain/ds/constants";
+import { currencies, contactEmail,
+contactPhoneNo } from "@/domain/ds/constants";
 import getConfig from "next/config";
+import useLocale from "@/hooks/useLocale";
 const { publicRuntimeConfig } = getConfig();
+import useCurrency from "@/hooks/useCurrency";
+import { useTranslation } from 'next-i18next';
 
-interface FooterProps {
-  onLangChanged(lang: LanguageTpo): void;
-  onCurrencyChanged(currency: CurrencyTpo): void;
-}
-
-export default function Footer({
-  onLangChanged,
-  onCurrencyChanged
-}: FooterProps) {
-  let langItems = Languages.map((item: LanguageTpo) => (
-    <option key={item.id} value={item.code}>
-      {item.labelEn}
-    </option>
-  ));
-  let currencyItems = Currencies.map((item: CurrencyTpo) => (
-    <option key={item.id} value={item.code}>
-      {item.labelEn}
-    </option>
-  ));
+export default function Footer() {
+  const { onNavigateToLocale, locale, locales } = useLocale();
+  const { onCurrencyChange, currency } = useCurrency();
+  const { t } = useTranslation("common")
 
   return (
     <footer className="pb-16">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">
-        <div className="flex">
+        <div className="flex grow">
           <picture className="mr-6 hidden md:block">
             <img
-              src={`${publicRuntimeConfig.basePath}/logo.svg`}
+              src={`${publicRuntimeConfig.basePath}/imgs/logo.svg`}
               alt="logo"
               className="w-10 h-10"
             />
           </picture>
           <div className="py-4 pr-4">
             <p className="text-base mb-5">
-              <span>
-                We are on a mission to open up language to everyone, crafted by
-                expert humans, powered by technology, and efficiently delivered.
-              </span>
+              <span>{t("footer_we_are_on_a_mission")}</span>
             </p>
-            <small className="text-small text-slate-500">
-              © Company Name · VAT 323323
-            </small>
+            <small className="text-small text-slate-500">{t("footer_copyrights")}</small>
           </div>
         </div>
         {/*	
@@ -60,42 +42,62 @@ export default function Footer({
         */}
         <div className="basis-1/3">
           <div className="relative mb-3 ">
-            <select className="py-3 pl-3 pr-6 w-full border rounded">
-              {langItems}
+            <select
+              className="py-3 pl-3 pr-6 w-full border rounded"
+              value={locale}
+              onChange={async (event) =>
+                await onNavigateToLocale(event.target.value)
+              }
+            >
+              {locales.map((item: string, index: number) => (
+                <option key={index} value={item}>
+                  {t(`lang_label_${item.toLowerCase()}`)}
+                </option>
+              ))}
             </select>
           </div>
           <div className="relative mb-6">
-            <select className="py-3 pl-3 pr-6 w-full border rounded">
-              {currencyItems}
+            <select
+              className="py-3 pl-3 pr-6 w-full border rounded"
+              value={currency}
+              onChange={async (event) =>
+                await onCurrencyChange(event.target.value)
+              }
+            >
+              {currencies.map((item: string, index: number) => (
+                <option key={index} value={item}>
+                  {t(`currency_label_${item.toLowerCase()}`)}
+                </option>
+              ))}
             </select>
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
               <img
-                src={`${publicRuntimeConfig.basePath}/telephone.svg`}
+                src={`${publicRuntimeConfig.basePath}/imgs/telephone.svg`}
                 alt="telephone"
               />
             </picture>
-            <Link className="text-blue-600" href="tel:(+82) 10-9160-1590">
-              (+82) 10-9160-1590
+            <Link className="text-blue-600" href={`tel:${contactPhoneNo}`}>
+              {contactPhoneNo}
             </Link>
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
               <img
-                src={`${publicRuntimeConfig.basePath}/send.svg`}
+                src={`${publicRuntimeConfig.basePath}/imgs/send.svg`}
                 alt="telephone"
               />
             </picture>
-            <Link className="text-blue-600" href="mailto:amoallim15@gmail.com">
-              amoallim15@gmail.com
+            <Link className="text-blue-600" href={`mailto:${contactEmail}`}>
+              {contactEmail}
             </Link>
           </div>
           <div className="flex gap-4">
             <Link href="">
               <picture>
                 <img
-                  src={`${publicRuntimeConfig.basePath}/twitter.svg`}
+                  src={`${publicRuntimeConfig.basePath}/imgs/twitter.svg`}
                   alt="social twitter"
                 />
               </picture>
@@ -103,7 +105,7 @@ export default function Footer({
             <Link href="">
               <picture>
                 <img
-                  src={`${publicRuntimeConfig.basePath}/linkedin.svg`}
+                  src={`${publicRuntimeConfig.basePath}/imgs/linkedin.svg`}
                   alt="social linkedin"
                 />
               </picture>

@@ -32,7 +32,7 @@ export default function MainSection() {
           <picture>
             <img
               className="md:max-w-md mx-auto"
-              src={`${publicRuntimeConfig.basePath}/welcome_hero.webp`}
+              src={`${publicRuntimeConfig.basePath}/imgs/welcome_hero.webp`}
               alt="hero img"
               loading="eager"
             />

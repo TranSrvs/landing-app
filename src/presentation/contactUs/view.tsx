@@ -16,7 +16,7 @@ export default function View() {
         <MainSection status={false} />
         <GetInstantQuoteSection />
       </main>
-      <Footer onLangChanged={() => {}} onCurrencyChanged={() => {}} />
+      <Footer />
     </>
   );
 }

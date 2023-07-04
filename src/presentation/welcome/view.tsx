@@ -17,7 +17,7 @@ export default function View() {
         <MoreQuestionsSection />
         <GetInstantQuoteSection />
       </main>
-      <Footer onLangChanged={() => {}} onCurrencyChanged={() => {}} />
+      <Footer />
     </>
   );
 }

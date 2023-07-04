@@ -8,7 +8,7 @@ export default function UploadFileInput() {
       <input type="hidden" name="files" />
       <picture className="inline-block w-4 h-4 mr-3">
         <img
-          src={`${publicRuntimeConfig.basePath}/attachment.svg`}
+          src={`${publicRuntimeConfig.basePath}/imgs/attachment.svg`}
           alt="attachment"
           className="w-4 h-4"
         />

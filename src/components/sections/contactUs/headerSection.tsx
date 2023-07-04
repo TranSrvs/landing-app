@@ -21,7 +21,7 @@ export default function HeaderSection({ contactDateTime }: HeaderSectionProps) {
         <div className="flex items-center mb-3 justify-center grow">
           <picture className="mr-3 inline-block">
             <img
-              src={`${publicRuntimeConfig.basePath}/send.svg`}
+              src={`${publicRuntimeConfig.basePath}/imgs/send.svg`}
               alt="telephone"
             />
           </picture>

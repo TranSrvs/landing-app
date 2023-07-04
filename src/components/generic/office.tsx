@@ -20,7 +20,7 @@ export default function Office({
       <div className="">
         <picture className="p-3 rounded-full bg-slate-200 block mr-5 border border-slate-500">
           <img
-            src={`${publicRuntimeConfig.basePath}/map_pin.svg`}
+            src={`${publicRuntimeConfig.basePath}/imgs/map_pin.svg`}
             alt="map pin"
             className="w-6 h-6"
           />

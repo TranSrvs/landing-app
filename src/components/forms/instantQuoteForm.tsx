@@ -82,7 +82,7 @@ export default function InstantQuoteForm({
             </div>
           </div>
           <div className="flex mt-5 align-center items-center">
-            <span className="mr-5 rounded-full bg-green-700 text-white font-semibold text-sm px-5 py-1 inline-block">
+            <span className="mr-5 text-center rounded-full bg-green-700 text-white font-semibold text-sm px-5 py-1 inline-block">
               Pay after delivery
             </span>
             <span className="text-sm text-white">

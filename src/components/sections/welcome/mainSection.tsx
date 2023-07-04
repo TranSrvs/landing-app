@@ -1,38 +1,36 @@
 import React from "react";
 import Link from "next/link";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
+import { useTranslation } from "next-i18next";
+import { basePath } from "@/domain/ds/constants";
 
 export default function MainSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">
         <div className="p-4">
           <h1 className="text-5xl font-semibold mb-3">
-            We open up language to everyone
+            {t("welcome_hero_title")}
           </h1>
-          <p className="text-base mb-5">
-            Professional translation services made easy. Crafted by expert
-            humans, powered by technology, efficiently delivered.
-          </p>
+          <p className="text-base mb-5">{t("welcome_hero_description")}</p>
           <Link
             className="my-3 mr-3 p-5 rounded-md bg-slate-600 text-white inline-block"
             href="/quote"
           >
-            Instant Quote
+            {t("instant_quote")}
           </Link>
           <Link
             className="my-3 mr-3 p-5 rounded-md bg-slate-500 text-white inline-block"
             href="/contact-us"
           >
-            Contact Us
+            {t("contact_us")}
           </Link>
         </div>
         <div className="p-4">
           <picture>
             <img
               className="md:max-w-md mx-auto"
-              src={`${publicRuntimeConfig.basePath}/imgs/welcome_hero.webp`}
+              src={`${basePath}/imgs/welcome_hero.webp`}
               alt="hero img"
               loading="eager"
             />

@@ -9,7 +9,7 @@ interface IUseLocale {
 
 export default function useLocale(): IUseLocale {
   const router = useRouter();
-
+  console.log(router.locale);
   const onNavigateToLocale = React.useCallback(
     async (locale: String) => {
       await router.push(router.pathname, router.pathname, { locale: locale });

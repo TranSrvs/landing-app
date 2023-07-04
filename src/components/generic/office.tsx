@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
+import { basePath } from "@/domain/ds/constants";
 interface OfficeProps {
   country: string;
   officeType: string;
   address: string;
   mapUri: string;
 }
+import { useTranslation } from "next-i18next";
 
 export default function Office({
   country,
@@ -15,12 +15,13 @@ export default function Office({
   address,
   mapUri
 }: OfficeProps) {
+  const { t } = useTranslation();
   return (
     <div className="flex">
       <div className="">
         <picture className="p-3 rounded-full bg-slate-200 block mr-5 border border-slate-500">
           <img
-            src={`${publicRuntimeConfig.basePath}/imgs/map_pin.svg`}
+            src={`${basePath}/imgs/map_pin.svg`}
             alt="map pin"
             className="w-6 h-6"
           />
@@ -34,7 +35,7 @@ export default function Office({
           <span>{address}</span>
         </p>
         <Link className="text-blue-600 underline" href={mapUri}>
-          View map
+          {t("view_map")}
         </Link>
       </div>
     </div>

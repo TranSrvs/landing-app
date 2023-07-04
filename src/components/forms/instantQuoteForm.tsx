@@ -2,6 +2,7 @@ import React from "react";
 import LanguageTpo from "@/domain/models/tpos/language";
 import SubjectTpo from "@/domain/models/tpos/subject";
 import { Languages, Subjects } from "@/domain/ds/constants";
+import { useTranslation } from "next-i18next";
 
 interface InstantQuoteFormProps {
   guaranteedDates: Date[];
@@ -10,6 +11,8 @@ interface InstantQuoteFormProps {
 export default function InstantQuoteForm({
   guaranteedDates
 }: InstantQuoteFormProps) {
+  const { t } = useTranslation();
+
   let fromLangItems = Languages.map((item: LanguageTpo) => (
     <option key={item.id} value={item.code}>
       {item.labelEn}
@@ -37,19 +40,21 @@ export default function InstantQuoteForm({
         <form>
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col basis-1/3">
-              <label className="text-base text-white mb-3">From</label>
+              <label className="text-base text-white mb-3">{t("from")}</label>
               <select className="py-3 px-3 w-full border rounded">
                 {fromLangItems}
               </select>
             </div>
             <div className="flex flex-col basis-1/3">
-              <label className="text-base text-white mb-3">To</label>
+              <label className="text-base text-white mb-3">{t("to")}</label>
               <select className="py-3 px-3 w-full border rounded">
                 {toLangItems}
               </select>
             </div>
             <div className="flex flex-col basis-1/3">
-              <label className="text-base text-white mb-3">Word Count</label>
+              <label className="text-base text-white mb-3">
+                {t("word_count")}
+              </label>
               <input
                 type="number"
                 name="work_count"
@@ -62,14 +67,16 @@ export default function InstantQuoteForm({
           </div>
           <div className="flex flex-col md:flex-row gap-4 mt-5">
             <div className="flex flex-col basis-1/3">
-              <label className="text-base text-white mb-3">Subject</label>
+              <label className="text-base text-white mb-3">
+                {t("subject")}
+              </label>
               <select className="py-3 px-3 w-full border rounded">
                 {subjectItems}
               </select>
             </div>
             <div className="flex flex-col basis-1/3">
               <label className="text-base text-white mb-3">
-                Guaranteed delivery date
+                {t("guaranteed_delivery_date")}
               </label>
               <select className="py-3 px-3 w-full border rounded">
                 {guaranteedDateItems}
@@ -77,18 +84,15 @@ export default function InstantQuoteForm({
             </div>
             <div className="flex flex-col basis-1/3 justify-end">
               <button className="text-center mt-5 py-3 px-8 rounded-md bg-slate-600 text-white w-full">
-                Show prices
+                {t("show_prices")}
               </button>
             </div>
           </div>
           <div className="flex mt-5 align-center items-center">
             <span className="mr-5 text-center rounded-full bg-green-700 text-white font-semibold text-sm px-5 py-1 inline-block">
-              Pay after delivery
+              {t("pay_after_delivery")}
             </span>
-            <span className="text-sm text-white">
-              We trust you: feel free to pay within 5 days from delivery via
-              bank transfer, credit card, or PayPal.
-            </span>
+            <span className="text-sm text-white">{t("we_trust_you")}</span>
           </div>
         </form>
       </div>

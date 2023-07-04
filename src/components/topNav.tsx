@@ -1,9 +1,8 @@
 import React from "react";
 import PageType from "@/domain/models/enums/pageType";
 import Link from "next/link";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
-import { useTranslation } from 'next-i18next';
+import { basePath } from "@/domain/ds/constants";
+import { useTranslation } from "next-i18next";
 
 interface TopNavProps {
   page: PageType;
@@ -13,7 +12,7 @@ const CONTACT_US_NAV_CASES = [PageType.WELCOME, PageType.QUOTE];
 const INSTANT_QUOTE_NAV_CASES = [PageType.WELCOME, PageType.CONTACT_US];
 
 export default function TopNav({ page }: TopNavProps) {
-  const { t } = useTranslation()
+  const { t } = useTranslation("common");
 
   return (
     <header className="mt-8 py-6">
@@ -21,7 +20,7 @@ export default function TopNav({ page }: TopNavProps) {
         <div>
           <Link href="/welcome">
             <img
-              src={`${publicRuntimeConfig.basePath}/imgs/logo.svg`}
+              src={`${basePath}/imgs/logo.svg`}
               className="h-12 w-12 inline-block"
               alt="logo"
             />

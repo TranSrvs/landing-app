@@ -1,39 +1,34 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 export default function OurOffersSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">
         <div className="p-4 grow basis-1/3">
-          <h3 className="text-3xl font-semibold mb-3">Our Offers</h3>
+          <h3 className="text-3xl font-semibold mb-3">{t("our_offers")}</h3>
         </div>
         <div className="p-4 basis-2/3">
           <h4 className="text-xl font-semibold mb-3">
-            Professional Translation
+            {t("professional_translation")}
           </h4>
           <p className="text-base mb-5">
-            <span>
-              The easy and fast way to professionally translate documents,
-              manuals, websites and more, according to your schedule and
-              requirements.
-            </span>
-            <span>
-              We currently Support Arabic, English, Korean, and Russian.
-            </span>
+            <span>{t("professional_translation_description_part_1")}</span>
+            <br />
+            <span>{t("professional_translation_description_part_2")}</span>
           </p>
-          <h4 className="text-xl font-semibold mb-3">Official Translation</h4>
+          <h4 className="text-xl font-semibold mb-3">
+            {t("official_translation")}
+          </h4>
           <p className="text-base mb-5">
-            Our professional translation services can be certified or sworn in
-            Court, depending on the country where you must present your
-            document.
+            {t("official_translation_description")}
           </p>
-
-          <h4 className="text-xl font-semibold mb-3">Urgent Translation</h4>
+          <h4 className="text-xl font-semibold mb-3">
+            {t("urgent_translation")}
+          </h4>
           <p className="text-base mb-5">
-            <span>
-              We can translate large volumes in less than 24 hours thanks to our
-              large network of translators powered by optimized technologies.
-            </span>
+            <span>{t("urgent_translation_description")}</span>
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config')
+const { i18n } = require("./next-i18next.config");
 const basePath = process.env.NODE_ENV === "development" ? "" : "/landing-app";
 const nextConfig = {
   reactStrictMode: true,

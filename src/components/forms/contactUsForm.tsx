@@ -1,14 +1,16 @@
 import React from "react";
 import UploadFileInput from "@/components/generic/uploadFileInput";
+import { useTranslation } from "next-i18next";
 
 export default function ContactUsForm() {
+  const { t } = useTranslation();
   return (
     <div className="p-12 bg-slate-700">
       <div>
         <form>
           <div className="flex flex-col">
             <label className="text-base text-white mb-3">
-              <span>Email address</span>
+              <span>{t("email_address")}</span>
               <span>&nbsp;</span>
               <span className="text-red-500">*</span>
             </label>
@@ -16,14 +18,14 @@ export default function ContactUsForm() {
               type="text"
               name="email"
               className="py-3 px-3 w-full border rounded"
-              placeholder="E.g. example@domain.com"
+              placeholder="example@domain.com"
               autoComplete="off"
               required
             />
           </div>
           <div className="flex flex-col mt-5">
             <label className="text-base text-white mb-3">
-              <span>Enter your name</span>
+              <span>{t("enter_your_name")}</span>
               <span>&nbsp;</span>
               <span className="text-red-500">*</span>
             </label>
@@ -32,17 +34,19 @@ export default function ContactUsForm() {
               name="name"
               className="py-3 px-3 w-full border rounded"
               autoComplete="off"
-              placeholder="E.g. John Doe"
+              placeholder="John Doe"
               required
             />
           </div>
           <div className="flex flex-col mt-5">
-            <label className="text-base text-white mb-3">Upload files</label>
+            <label className="text-base text-white mb-3">
+              {t("upload_files")}
+            </label>
             <UploadFileInput />
           </div>
           <div className="flex flex-col mt-5">
             <label className="text-base text-white mb-3">
-              <span>Message</span>
+              <span>{t("message")}</span>
               <span>&nbsp;</span>
               <span className="text-red-500">*</span>
             </label>
@@ -50,14 +54,14 @@ export default function ContactUsForm() {
               name="message"
               className="py-3 px-3 w-full border rounded"
               autoComplete="off"
-              placeholder="Write a message..."
+              placeholder={t("write_a_message")}
               rows={4}
               required
             ></textarea>
           </div>
           {/*<div></div>*/}
           <button className="text-center mt-5 py-3 px-8 rounded-md bg-slate-600 text-white w-full">
-            Send
+            {t("send")}
           </button>
         </form>
       </div>

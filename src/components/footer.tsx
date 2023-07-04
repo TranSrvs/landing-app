@@ -1,17 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import { currencies, contactEmail,
-contactPhoneNo } from "@/domain/ds/constants";
-import getConfig from "next/config";
+import {
+  currencies,
+  contactEmail,
+  contactPhoneNo
+} from "@/domain/ds/constants";
 import useLocale from "@/hooks/useLocale";
-const { publicRuntimeConfig } = getConfig();
+import { basePath } from "@/domain/ds/constants";
 import useCurrency from "@/hooks/useCurrency";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 export default function Footer() {
   const { onNavigateToLocale, locale, locales } = useLocale();
   const { onCurrencyChange, currency } = useCurrency();
-  const { t } = useTranslation("common")
+  const { t } = useTranslation("common");
 
   return (
     <footer className="pb-16">
@@ -19,7 +21,7 @@ export default function Footer() {
         <div className="flex grow">
           <picture className="mr-6 hidden md:block">
             <img
-              src={`${publicRuntimeConfig.basePath}/imgs/logo.svg`}
+              src={`${basePath}/imgs/logo.svg`}
               alt="logo"
               className="w-10 h-10"
             />
@@ -28,7 +30,9 @@ export default function Footer() {
             <p className="text-base mb-5">
               <span>{t("footer_we_are_on_a_mission")}</span>
             </p>
-            <small className="text-small text-slate-500">{t("footer_copyrights")}</small>
+            <small className="text-small text-slate-500">
+              {t("footer_copyrights")}
+            </small>
           </div>
         </div>
         {/*	
@@ -73,10 +77,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img
-                src={`${publicRuntimeConfig.basePath}/imgs/telephone.svg`}
-                alt="telephone"
-              />
+              <img src={`${basePath}/imgs/telephone.svg`} alt="telephone" />
             </picture>
             <Link className="text-blue-600" href={`tel:${contactPhoneNo}`}>
               {contactPhoneNo}
@@ -84,10 +85,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center mb-3">
             <picture className="mr-3 inline-block">
-              <img
-                src={`${publicRuntimeConfig.basePath}/imgs/send.svg`}
-                alt="telephone"
-              />
+              <img src={`${basePath}/imgs/send.svg`} alt="telephone" />
             </picture>
             <Link className="text-blue-600" href={`mailto:${contactEmail}`}>
               {contactEmail}
@@ -97,7 +95,7 @@ export default function Footer() {
             <Link href="">
               <picture>
                 <img
-                  src={`${publicRuntimeConfig.basePath}/imgs/twitter.svg`}
+                  src={`${basePath}/imgs/twitter.svg`}
                   alt="social twitter"
                 />
               </picture>
@@ -105,7 +103,7 @@ export default function Footer() {
             <Link href="">
               <picture>
                 <img
-                  src={`${publicRuntimeConfig.basePath}/imgs/linkedin.svg`}
+                  src={`${basePath}/imgs/linkedin.svg`}
                   alt="social linkedin"
                 />
               </picture>

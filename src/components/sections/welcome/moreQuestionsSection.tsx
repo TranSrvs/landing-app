@@ -1,28 +1,33 @@
 import React from "react";
 import Link from "next/link";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
+import { basePath } from "@/domain/ds/constants";
+import { useTranslation } from "next-i18next";
+import {
+  contactPersonName,
+  contactPersonPosition
+} from "@/domain/ds/constants";
 
 export default function MoreQuestionsSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-12">
       <div className="mx-auto max-w-5xl flex px-8 flex-col md:flex-row">
         <div className="p-4">
           <h3 className="text-3xl font-semibold mb-3">
-            <span>More questions?</span>
+            <span>{t("more_questions")}</span>
             <br />
-            <span>Get in touch.</span>
+            <span>{t("get_in_touch")}</span>
           </h3>
           <p className="text-base mb-5">
-            <span>Our team is ready to find a solution</span>
+            <span>{t("our_team_is_ready")}</span>
             <br />
-            <span>to your translation needs.</span>
+            <span>{t("to_your_translation_needs")}</span>
           </p>
           <Link
             className="p-3 rounded-md bg-slate-500 text-white"
             href="/contact-us"
           >
-            Contact Us
+            {t("contact_us")}
           </Link>
         </div>
         <div className="grow"></div>
@@ -32,19 +37,23 @@ export default function MoreQuestionsSection() {
               <div
                 className="h-24 w-24 rounded-full bg-cover"
                 style={{
-                  backgroundImage: `url(${publicRuntimeConfig.basePath}/imgs/eugene.png)`
+                  backgroundImage: `url(${basePath}/imgs/eugene.png)`
                 }}
               ></div>
             </Link>
           </div>
           <div className="text-center">
             <h4 className="text-xl font-semibold mb-3">
-              <span>Hello, I&apos;m Eugene.</span>
+              <span>
+                {t("hello_iam")} {contactPersonName}.
+              </span>
               <br />
-              <span>How can I help you?</span>
+              <span>{t("how_can_i_help")}</span>
             </h4>
             <p className="text-base mb-5 text-slate-500">
-              <span>Eugene - Account Manager</span>
+              <span>
+                {contactPersonName} - {contactPersonPosition}
+              </span>
             </p>
           </div>
         </div>

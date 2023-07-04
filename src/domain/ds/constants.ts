@@ -1,10 +1,14 @@
-import LanguageTpo from "@/domain/models/tpos/language";
 import CurrencyTpo from "@/domain/models/tpos/currency";
 import SubjectTpo from "@/domain/models/tpos/subject";
+import getConfig from "next/config";
 
+const { publicRuntimeConfig } = getConfig();
 export const currencies = ["USD", "KRW", "SAR"];
-export const contactEmail = "amoallim15@gmail.com"
-export const contactPhoneNo = "(+82) 10-9160-1590"
+export const contactEmail = "amoallim15@gmail.com";
+export const contactPhoneNo = "(+82) 10-9160-1590";
+export const contactPersonName = "Eugene";
+export const contactPersonPosition = "Account Manager";
+export const basePath = publicRuntimeConfig.basePath;
 
 export const Subjects = [
   {
@@ -39,4 +43,3 @@ export const Subjects = [
     labelKo: "Travel & Tourism"
   }
 ];
-

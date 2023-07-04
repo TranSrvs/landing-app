@@ -27,7 +27,7 @@ export default function TopNav({ page }: TopNavProps) {
           </Link>
         </div>
         <div className="grow" />
-        <nav className="">
+        <nav className="hidden md:block">
           <ol className="flex items-center">
             {CONTACT_US_NAV_CASES.includes(page) && (
               <li className="flex items-center ml-3">

@@ -28,9 +28,9 @@ export default function Footer({
 
   return (
     <footer className="pb-16">
-      <div className="mx-auto max-w-5xl px-8 flex">
+      <div className="mx-auto max-w-5xl px-8 flex flex-col md:flex-row">
         <div className="flex">
-          <picture className="mr-6">
+          <picture className="mr-6 hidden md:block">
             <img
               src={`${publicRuntimeConfig.basePath}/logo.svg`}
               alt="logo"

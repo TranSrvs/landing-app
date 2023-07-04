@@ -6,7 +6,7 @@ const { publicRuntimeConfig } = getConfig();
 export default function MoreQuestionsSection() {
   return (
     <section className="py-12">
-      <div className="mx-auto max-w-5xl flex px-8">
+      <div className="mx-auto max-w-5xl flex px-8 flex-col md:flex-row">
         <div className="p-4">
           <h3 className="text-3xl font-semibold mb-3">
             <span>More questions?</span>

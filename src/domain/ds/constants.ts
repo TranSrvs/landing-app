@@ -8,7 +8,7 @@ export const contactPhoneNo = "(+82) 10-9160-1590";
 export const contactPersonName = "Eugene";
 export const contactPersonPosition = "Account Manager";
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
-console.log(basePath)
+console.log(basePath);
 export const navs = [
   {
     href: "/contact-us",
